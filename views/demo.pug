@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{city}</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/gif" sizes="16x16">
+    style
+        include ../static/a.css
+</head>
+<body>
+    <img src="../static/cloud.jpg" id="bgimg">
+    <div class="weather">
+        <div id="disc">
+            <img src="../static/temp.png">
+            <p>&nbsp&nbspCurrent-Temperature <br>&nbsp&nbsp #{temp}<sup>&#176</sup>C<br>&nbsp&nbspReal-Feel Temperature<br>&nbsp&nbsp#{feels_like}<sup>&#176</sup>C</p>
+        </div>
+        <div class="conditions">
+            <div id="mintemp">
+                <img src="../static/mintemp.png">
+                <p>&nbsp&nbspMin-Temperature <br>&nbsp&nbsp #{temp_min}<sup>&#176</sup>C</p>
+            </div>
+            <div id="mintemp">
+                <img src="../static/maxtemp.jpg">
+                <p>&nbspMax-Temperature <br>&nbsp #{temp_max}<sup>&#176</sup>C</p>
+            </div>
+            <div id="mintemp">
+                <img src="../static/humidity.png">
+                <p>&nbsp&nbspHumidity<br>&nbsp&nbsp#{humidity}%</p>
+            </div>
+        </div>
+        <div class="conditions">
+            <div id="mintemp">
+                <img src="../static/visibility.png">
+                <p>&nbsp&nbspVisibility<br>&nbsp&nbsp#{visibility} m</p>
+            </div>
+            <div id="mintemp">
+                <img src="../static/pressure.png">
+                <p>&nbsp&nbspPressure<br>&nbsp&nbsp#{pressure} mb</p>
+            </div>
+            <div id="mintemp">
+                <img src="../static/speed.jpg">
+                <p>&nbsp&nbspWind Speed<br>&nbsp&nbsp#{speed} Km/hr</p>
+            </div>
+        </div>
+    </div>
+        <!-- <h1>
+        |    It's #{discription} Outside........
+        </h1>
+        <div id="conditions">
+           <h3>Current-Temperature : #{temp}</h3>
+           <h3>Real-Feel :#{feels_like}</h3>
+           <h3>Minimum-Temperature :#{temp_min}</h3>
+           <h3>Maximum-Temperature :#{temp_max}</h3>
+           <h3>Humidity :#{humidity}</h3>
+           <h3>Visibility :#{visibility}</h3>
+           <h3>Wind-Speed :#{speed}</h3>
+           <h3>Pressure: #{pressure}</h3>
+        </div>
+        </div> -->
+        <script>
+        |    var disc=(`#{discription}`);
+        |     if(disc.search('rain')!=-1)
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/rainy.jpg';
+        |     }
+        |     else if(disc.search('mist')!=-1)
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/mist.jpg';
+        |     }
+        |     else if(disc.search('haze')!=-1)
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/haze.jpg';
+        |     }
+        |     else if(disc.search('sunny')!=-1)
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/Sunny.jpg';
+        |     }
+        |     else if(disc.search('cloud')!=-1)
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/cloud.jpg';
+        |     }
+        |     else
+        |     {
+        |         bgimg=document.getElementById("bgimg");
+        |         bgimg.src='../static/clear.jpg';
+        |     }
+        </script>
+</body>
+</html>
