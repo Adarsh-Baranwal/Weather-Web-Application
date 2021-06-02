@@ -10,3 +10,5 @@ To Run This Application-
 search for localhost in your browser and now you can search for any city of which you want to know current weather condition.
 
 In this project I have used an openweathermap api to get the current weather condition of any location.
+
+<img src="static/weather 1.jpg" width="600">
